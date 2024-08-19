@@ -24,12 +24,9 @@ resource "azurerm_app_service" "container_service" {
   resource_group_name = azurerm_resource_group.example.name
   app_service_plan_id = azurerm_service_plan.linux_plan.id
 
-     app_settings = {
-    "DOCKER_REGISTRY_SERVER_URL"      = ""
-    "DOCKER_REGISTRY_SERVER_USERNAME" = ""
-    "DOCKER_REGISTRY_SERVER_PASSWORD" = ""
-    "WEBSITES_ENABLE_APP_SERVICE_STORAGE" = ""
+  app_settings = {
   }
+  
   site_config {
     linux_fx_version = "" # No Docker image specified
   }
