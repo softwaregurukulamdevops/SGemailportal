@@ -26,7 +26,7 @@ resource "azurerm_app_service" "container_service" {
 
   
   site_config {
-    linux_fx_version = "" # No Docker image specified
+ 
   }
 }
 
